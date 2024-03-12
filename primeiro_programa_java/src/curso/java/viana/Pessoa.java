@@ -1,7 +1,7 @@
 package curso.java.viana;
 
 public class Pessoa {
-	/*teste de commit*/
+	
 	private String nome;
 	private String sobrenome;
 	private int idade;
