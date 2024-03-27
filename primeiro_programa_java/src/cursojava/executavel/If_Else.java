@@ -12,7 +12,7 @@ public class If_Else {
 		 * 70) { System.out.println("Que pena você está reprovado, estude mais!!"); }
 		 * else { System.out.println("Aluno não identificado"); }
 		 */
-
+		
 		int nota1 = 90;
 		int nota2 = 60;
 		int nota3 = 10;
