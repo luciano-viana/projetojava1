@@ -14,6 +14,7 @@ public class OperadoresRelacionais {
 		 * >= Maior Igual
 		 */
 
+		
 		int nota1 = 92;
 		int nota2 = 92;
 		
