@@ -26,8 +26,5 @@ public class OperadoresRelacionais {
 			System.out.println("Nota2: " + nota2);
             System.out.println("Nota1 não é Igual a Nota2");
 		}
-
-		
 	}
-
 }
