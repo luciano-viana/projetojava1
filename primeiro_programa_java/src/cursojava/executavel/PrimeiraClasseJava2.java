@@ -18,6 +18,11 @@ public class PrimeiraClasseJava2 {
 		 *Referência: São as variáveis que faz referência para os objetos, exemplo: "aluno1".
 		 *Atributo: São os atributos das caracteristicas 'nome, idade...' que representa a pessoa no mundo real, no caso da classe Aluno*/
 		Aluno aluno1 = new Aluno(); /*Aqui será o João*/
+		aluno1.nome = "João";
+		aluno1.idade = 35;
+		System.out.println("Nome do aluno 1 é = " + aluno1.nome);
+		System.out.println("Idade = " + aluno1.idade);
+		
 		Aluno aluno2 = new Aluno(); /*Aqui será o Pedro*/
 		Aluno aluno3 = new Aluno(); /*Aqui será o Luciano*/
 		
