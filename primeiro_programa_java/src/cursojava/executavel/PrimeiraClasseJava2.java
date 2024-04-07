@@ -47,7 +47,7 @@ public class PrimeiraClasseJava2 {
 		
 		
 		/*=============================================================================*/
-		Aluno aluno2 = new Aluno(); /*Aqui será o Pedro*/
+		Aluno aluno2 = new Aluno(); /*Aqui será o Lucas*/
 		aluno2.setNome("Lucas");
 		aluno2.setIdade(25);
 		
@@ -56,7 +56,7 @@ public class PrimeiraClasseJava2 {
 		System.out.println("Idade: " + aluno2.getIdade());
 		
 		/*=============================================================================*/
-		Aluno aluno3 = new Aluno(); /*Aqui será o Luciano*/
+		Aluno aluno3 = new Aluno(); /*Aqui será a Patricia*/
 		aluno3.setNome("Patrícia");
 		aluno3.setIdade(28);
 		
