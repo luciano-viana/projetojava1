@@ -45,7 +45,6 @@ public class PrimeiraClasseJava2 {
 		System.out.println("Série Matriculado: " + aluno1.getSerieMatriculado());
 		System.out.println("Sexo: " + aluno1.getSexo());
 		
-		
 		/*=============================================================================*/
 		Aluno aluno2 = new Aluno(); /*Aqui será o Lucas*/
 		aluno2.setNome("Lucas");
