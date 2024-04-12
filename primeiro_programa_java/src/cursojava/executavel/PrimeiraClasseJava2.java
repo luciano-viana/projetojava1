@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import java.text.DecimalFormat;
+
 import cursojava.classes.Aluno;
 
 public class PrimeiraClasseJava2 {
@@ -30,6 +32,11 @@ public class PrimeiraClasseJava2 {
 		aluno1.setNomeEscola("Colégio Ojvetivo integrado");
 		aluno1.setSerieMatriculado("3° Ano - Ensino Médio");
 		aluno1.setSexo("M");
+		aluno1.setNota1(90);
+		aluno1.setNota2(80.8);
+		aluno1.setNota3(70.9);
+		aluno1.setNota4(90.7);
+		
 		
 		System.out.println("*****************LISTA DE ALUNOS*****************");
 		/*GET recuperar os dados dentro do objeto*/
@@ -44,7 +51,10 @@ public class PrimeiraClasseJava2 {
 		System.out.println("Colégio Matriculado: " + aluno1.getNomeEscola());
 		System.out.println("Série Matriculado: " + aluno1.getSerieMatriculado());
 		System.out.println("Sexo: " + aluno1.getSexo());
-		
+		DecimalFormat deci = new DecimalFormat("0.00");/*Objeto para formatar as casas decimais após a virgula*/
+		System.out.println("Média Nota: " + deci.format(aluno1.getMediaNota())); /*Chamada de método que calcula média aluno*/
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado()? "Aprovado" : "Reprovado")); /*Validação do resultado boolean por operador ternário*/
+		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2()); /*Resultado por método do tipo String*/
 		
 		/*=============================================================================*/
 		Aluno aluno2 = new Aluno(); /*Aqui será o Lucas*/
