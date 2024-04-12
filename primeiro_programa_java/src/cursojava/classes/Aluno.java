@@ -1,5 +1,6 @@
 package cursojava.classes;
 
+/*A essência da orientação a objeto é ir criando métodos,rotinas,ir chamado e processando o software*/
 /*Está é nossa classe/objeto que representa o Aluno*/
 public class Aluno {
 
@@ -15,6 +16,10 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	private String sexo;
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private double nota4;
 
 	public Aluno() {/* Cria os dados na memória - Sendo padrão do Java */
 
@@ -123,6 +128,68 @@ public class Aluno {
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+
+	public double getNota1() {
+		return nota1;
+	}
+
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
+
+	/* Método que retorna a média das notas do Aluno */
+	public double getMediaNota() {
+		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+
+	/*
+	 * Sempre separar as responsabilidades,processos, funções, rotinas em métodos
+	 */
+	/* Método que retorna true para aprovado e false para reprovado*/
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota(); /*This.getMediaNota() está utilizando o método de cima*/
+
+		if (media >= 70) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/*Método que retornar o resultado por String com a mensagem informada "Aluno Aprovado" ou "Aluno Reprovado"*/
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+
+		if (media >= 70) {
+			return "Aluno Aprovado!!";
+		} else {
+			return "Aluno Reprovado!!";
+		}
 	}
 
 }
