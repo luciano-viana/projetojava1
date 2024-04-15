@@ -179,6 +179,7 @@ public class Aluno {
 		} else {
 			return false;
 		}
+		
 	}
 	
 	/*Método que retornar o resultado por String com a mensagem informada "Aluno Aprovado" ou "Aluno Reprovado"*/
