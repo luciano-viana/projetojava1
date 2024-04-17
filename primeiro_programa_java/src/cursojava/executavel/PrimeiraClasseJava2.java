@@ -72,7 +72,6 @@ public class PrimeiraClasseJava2 {
 		System.out.println("Nome do aluno 3: " + aluno3.getNome());
 		System.out.println("Idade: " + aluno3.getIdade());
 		
-		
 		/*=============================================================================*/
 		
 		/*Construtor com uma parâmetro*/
