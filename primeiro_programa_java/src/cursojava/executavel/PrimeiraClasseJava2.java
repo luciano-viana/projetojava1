@@ -74,7 +74,6 @@ public class PrimeiraClasseJava2 {
 		
 		/*=============================================================================*/
 		
-		
 		/*Construtor com uma parâmetro*/
 		Aluno aluno4 = new Aluno("Maria");
 		
