@@ -113,6 +113,7 @@ public class PrimeiraClasseJava2 {
 
 		/* Construtor com 2 parâmetros */
 		Aluno aluno5 = new Aluno("Lais", 23);
+		
 	}
 
 }
