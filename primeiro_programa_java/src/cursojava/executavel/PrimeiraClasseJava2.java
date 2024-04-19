@@ -40,7 +40,7 @@ public class PrimeiraClasseJava2 {
 		 * Aluno
 		 */
 
-		/* 2º - Instânciar objeto na memória do Java */
+		/* 2º - Instanciar objeto na memória do Java */
 		Aluno aluno1 = new Aluno(); /* Aqui será o João */
 
 		/* 3º - Setar as propriedades do Objeto */

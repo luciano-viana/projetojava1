@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.Objects;
+
 /*A essência da orientação a objeto é ir criando métodos,rotinas,ir chamado e processando o software*/
 /*Está é nossa classe/objeto que representa o Aluno*/
 public class Aluno {
@@ -170,19 +172,22 @@ public class Aluno {
 	/*
 	 * Sempre separar as responsabilidades,processos, funções, rotinas em métodos
 	 */
-	/* Método que retorna true para aprovado e false para reprovado*/
+	/* Método que retorna true para aprovado e false para reprovado */
 	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota(); /*This.getMediaNota() está utilizando o método de cima*/
+		double media = this.getMediaNota(); /* This.getMediaNota() está utilizando o método de cima */
 
 		if (media >= 70) {
 			return true;
 		} else {
 			return false;
 		}
-		
+
 	}
-	
-	/*Método que retornar o resultado por String com a mensagem informada "Aluno Aprovado" ou "Aluno Reprovado"*/
+
+	/*
+	 * Método que retornar o resultado por String com a mensagem informada
+	 * "Aluno Aprovado" ou "Aluno Reprovado"
+	 */
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 
@@ -192,8 +197,8 @@ public class Aluno {
 			return "Aluno Reprovado!!";
 		}
 	}
-	
-	/*Utilizando toStrig*/
+
+	/* Utilizando toStrig */
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
@@ -202,8 +207,22 @@ public class Aluno {
 				+ serieMatriculado + ", sexo=" + sexo + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3
 				+ ", nota4=" + nota4 + "]";
 	}
-	
-	
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
+	}
 
 }
