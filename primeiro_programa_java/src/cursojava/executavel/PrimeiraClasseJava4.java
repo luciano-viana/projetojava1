@@ -5,7 +5,7 @@ public class PrimeiraClasseJava4 {
 	
 	public static void main(String[] args) {
 		
-		/*Equals e hashcode (Diferenciar e comprar objetos)*/
+		/*Equals e hashcode (Diferenciar e comparar objetos)*/
 		
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome("Luciano");
