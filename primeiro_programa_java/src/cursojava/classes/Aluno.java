@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /*A essência da orientação a objeto é ir criando métodos,rotinas,ir chamado e processando o software*/
@@ -18,16 +20,17 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	private String sexo;
-	
-	/* Instanciar objeto na memória do Java */
-	private Disciplina disciplina = new Disciplina();
-	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+
+	/* Instanciar objeto Lista de Disciplinas na memória do Java */
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+	/* SET e GET da lista Disciplina */
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-	
-	public Disciplina getDisciplina() {
-		return disciplina;
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 
 	public Aluno() {/* Cria os dados na memória - Sendo padrão do Java */
@@ -138,18 +141,17 @@ public class Aluno {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	
-	/*Método que retorna a média do aluno*/
+
+	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2()
-		+ disciplina.getNota3() + disciplina.getNota4())/4;
+		return 0;
 	}
 
 	/*
 	 * Sempre separar as responsabilidades,processos, funções, rotinas em métodos
 	 */
-	/* Método que retorna true para aprovado e false para reprovado*/
-	
+	/* Método que retorna true para aprovado e false para reprovado */
+
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota(); /* This.getMediaNota() está utilizando o método de cima */
 
@@ -159,7 +161,6 @@ public class Aluno {
 			return false;
 		}
 	}
-	
 
 	/*
 	 * Método que retornar o resultado por String com a mensagem informada
@@ -181,15 +182,13 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", sexo=" + sexo + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + ", sexo=" + sexo + "]";
 	}
-	
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome, numeroCpf);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -202,6 +201,5 @@ public class Aluno {
 		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
 	}
-
 
 }

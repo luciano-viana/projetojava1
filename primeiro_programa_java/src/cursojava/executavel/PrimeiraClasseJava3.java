@@ -56,28 +56,17 @@ public class PrimeiraClasseJava3 {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setSexo(sexoAluno);
-		
-		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
-		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
-		
-		aluno1.getDisciplina().setDisciplina1(disciplana1);
-		aluno1.getDisciplina().setDisciplina2(disciplana2);
-		aluno1.getDisciplina().setDisciplina3(disciplana3);
-		aluno1.getDisciplina().setDisciplina4(disciplana4);
 
 		/* 4º - Chamar os métodos e mostrar os dados com toString */
 		System.out.println(aluno1.toString());/* Descrição do objeto na memoria */
 		System.out.println("Média do Aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
-		
-		/*Todo software sempre segue a mesma lógica
-		 * 1º - Entrada de Dados
-		 * 2º - Instanciar os Objetos
-		 * 3º - Passar os valores da entrada de dados para o Objeto
-		 * 4º - Processar e ter o resultado final
-		 * */
+
+		/*
+		 * Todo software sempre segue a mesma lógica 1º - Entrada de Dados 2º -
+		 * Instanciar os Objetos 3º - Passar os valores da entrada de dados para o
+		 * Objeto 4º - Processar e ter o resultado final
+		 */
 
 	}
 
