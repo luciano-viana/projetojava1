@@ -19,14 +19,16 @@ public class Aluno {
 	private String serieMatriculado;
 	private String sexo;
 	
-	private double nota1;
-	private String disciplina1;
-	private double nota2;
-	private String disciplina2;
-	private double nota3;
-	private String disciplina3;
-	private double nota4;
-	private String disciplina4;
+	/* Instanciar objeto na memória do Java */
+	private Disciplina disciplina = new Disciplina();
+	
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
+	
+	public Disciplina getDisciplina() {
+		return disciplina;
+	}
 
 	public Aluno() {/* Cria os dados na memória - Sendo padrão do Java */
 
@@ -136,80 +138,18 @@ public class Aluno {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-
-	public double getNota1() {
-		return nota1;
-	}
-
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
-	}
 	
-	public String getDisciplina1() {
-		return disciplina1;
-	}
-
-	public void setDisciplina1(String disciplina1) {
-		this.disciplina1 = disciplina1;
-	}
-
-	public String getDisciplina2() {
-		return disciplina2;
-	}
-
-	public void setDisciplina2(String disciplina2) {
-		this.disciplina2 = disciplina2;
-	}
-
-	public String getDisciplina3() {
-		return disciplina3;
-	}
-
-	public void setDisciplina3(String disciplina3) {
-		this.disciplina3 = disciplina3;
-	}
-
-	public String getDisciplina4() {
-		return disciplina4;
-	}
-
-	public void setDisciplina4(String disciplina4) {
-		this.disciplina4 = disciplina4;
-	}
-
-	/* Método que retorna a média das notas do Aluno */
+	/*Método que retorna a média do aluno*/
 	public double getMediaNota() {
-		return (nota1 + nota2 + nota3 + nota4) / 4;
+		return (disciplina.getNota1() + disciplina.getNota2()
+		+ disciplina.getNota3() + disciplina.getNota4())/4;
 	}
 
 	/*
 	 * Sempre separar as responsabilidades,processos, funções, rotinas em métodos
 	 */
-	/* Método que retorna true para aprovado e false para reprovado */
+	/* Método que retorna true para aprovado e false para reprovado*/
+	
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota(); /* This.getMediaNota() está utilizando o método de cima */
 
@@ -218,8 +158,8 @@ public class Aluno {
 		} else {
 			return false;
 		}
-
 	}
+	
 
 	/*
 	 * Método que retornar o resultado por String com a mensagem informada
@@ -241,15 +181,15 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", sexo=" + sexo + ", nota1=" + nota1 + ", disciplina1=" + disciplina1 + ", nota2="
-				+ nota2 + ", disciplina2=" + disciplina2 + ", nota3=" + nota3 + ", disciplina3=" + disciplina3
-				+ ", nota4=" + nota4 + ", disciplina4=" + disciplina4 + "]";
+				+ serieMatriculado + ", sexo=" + sexo + ", disciplina=" + disciplina + "]";
 	}
+	
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome, numeroCpf);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -262,5 +202,6 @@ public class Aluno {
 		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
 	}
+
 
 }

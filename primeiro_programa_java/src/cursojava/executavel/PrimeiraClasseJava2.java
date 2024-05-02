@@ -56,10 +56,10 @@ public class PrimeiraClasseJava2 {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setSexo(sexoAluno);
-		aluno1.setNota1(Double.parseDouble(nota1));
-		aluno1.setNota2(Double.parseDouble(nota2));
-		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setNota4(Double.parseDouble(nota4));
+		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
 
 		/* 4º - Chamar os métodos e mostrar os dados */
 		System.out.println("*****************LISTA DE ALUNOS*****************");
@@ -76,10 +76,8 @@ public class PrimeiraClasseJava2 {
 		System.out.println("Série Matriculado: " + aluno1.getSerieMatriculado());
 		System.out.println("Sexo: " + aluno1.getSexo());
 		DecimalFormat deci = new DecimalFormat("0.00");/* Objeto para formatar as casas decimais após a virgula */
-		System.out.println(
-				"Média Nota: " + deci.format(aluno1.getMediaNota())); /* Chamada de método que calcula média aluno */
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado"
-				: "Reprovado")); /* Validação do resultado boolean por operador ternário */
+		System.out.println("Média Nota: " + deci.format(aluno1.getMediaNota())); /* Chamada de método que calcula média aluno */
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado")); /* Validação do resultado boolean por operador ternário */
 		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2()); /* Resultado por método do tipo String */
 
 		/*
