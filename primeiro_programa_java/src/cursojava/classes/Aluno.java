@@ -21,6 +21,7 @@ public class Aluno {
 	private String serieMatriculado;
 	private String sexo;
 
+	
 	/* Instanciar objeto Lista de Disciplinas na memória do Java */
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
