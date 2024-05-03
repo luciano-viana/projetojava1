@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 /*Essa Classe é uma simplificação da PrimeiraClasse2*/
 public class PrimeiraClasseJava3 {
@@ -31,14 +32,6 @@ public class PrimeiraClasseJava3 {
 		String nomeEscola = JOptionPane.showInputDialog("7:Nome da Escola?");
 		String serie = JOptionPane.showInputDialog("6:Qual a série?");
 		String sexoAluno = JOptionPane.showInputDialog("5:Qual o sexo M ou F?");
-		String disciplana1 = JOptionPane.showInputDialog("Disciplina 1?");
-		String nota1 = JOptionPane.showInputDialog("4:Qual a Nota1?");
-		String disciplana2 = JOptionPane.showInputDialog("Disciplina 2?");
-		String nota2 = JOptionPane.showInputDialog("3:Qual a Nota2?");
-		String disciplana3 = JOptionPane.showInputDialog("Disciplina 3?");
-		String nota3 = JOptionPane.showInputDialog("2:Qual a Nota3?");
-		String disciplana4 = JOptionPane.showInputDialog("Disciplina 4?");
-		String nota4 = JOptionPane.showInputDialog("1:Qual a Nota4?");
 
 		/* 2º - Instanciar objeto na memória do Java */
 		Aluno aluno1 = new Aluno();
@@ -57,15 +50,38 @@ public class PrimeiraClasseJava3 {
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setSexo(sexoAluno);
 
+		/* Adicionando disciplina na lista */
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Banco de Dados");
+		disciplina1.setNota(90);
+		aluno1.getDisciplinas().add(disciplina1);
+
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matemática");
+		disciplina2.setNota(80);
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Estrutura de Dados");
+		disciplina3.setNota(97);
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Orientação a Objeto");
+		disciplina4.setNota(99);
+		aluno1.getDisciplinas().add(disciplina4);
+
 		/* 4º - Chamar os métodos e mostrar os dados com toString */
 		System.out.println(aluno1.toString());/* Descrição do objeto na memoria */
 		System.out.println("Média do Aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
 
 		/*
-		 * Todo software sempre segue a mesma lógica 1º - Entrada de Dados 2º -
-		 * Instanciar os Objetos 3º - Passar os valores da entrada de dados para o
-		 * Objeto 4º - Processar e ter o resultado final
+		 * Todo software sempre segue a mesmA lógica:
+		 * 1º - Entrada de Dados 
+		 * 2º - Instanciar os Objetos 
+		 * 3º - Passar os valores da entrada de dados para o Objeto 
+		 * 4º - Processar e ter o resultado final
 		 */
 
 	}
