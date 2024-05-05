@@ -22,7 +22,7 @@ public class PrimeiraClasseJava3 {
 
 		/* 1º - Entrada de Dados */
 		String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno?");
-		String idade = JOptionPane.showInputDialog("14:Qual a idade?");
+		/*String idade = JOptionPane.showInputDialog("14:Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("13:Data de Nascimento?");
 		String rg = JOptionPane.showInputDialog("12:RG?");
 		String cpf = JOptionPane.showInputDialog("11:CPF?");
@@ -31,7 +31,7 @@ public class PrimeiraClasseJava3 {
 		String dataMatricula = JOptionPane.showInputDialog("8:Data Matricula?");
 		String nomeEscola = JOptionPane.showInputDialog("7:Nome da Escola?");
 		String serie = JOptionPane.showInputDialog("6:Qual a série?");
-		String sexoAluno = JOptionPane.showInputDialog("5:Qual o sexo M ou F?");
+		String sexoAluno = JOptionPane.showInputDialog("5:Qual o sexo M ou F?");*/
 
 		/* 2º - Instanciar objeto na memória do Java */
 		Aluno aluno1 = new Aluno();
@@ -39,7 +39,7 @@ public class PrimeiraClasseJava3 {
 		/* 3º - Setar as propriedades do Objeto */
 		/* SET setar os dados dentro do objetivo */
 		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.parseInt(idade));
+		/*aluno1.setIdade(Integer.parseInt(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -48,7 +48,7 @@ public class PrimeiraClasseJava3 {
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setSexo(sexoAluno);
+		aluno1.setSexo(sexoAluno);*/
 
 		/* Adicionando dados na lista disciplina de forma dinâmica */
 		for(int pos = 1; pos <= 4; pos++) {
