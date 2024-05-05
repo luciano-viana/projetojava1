@@ -185,17 +185,18 @@ public class Aluno {
 	}
 
 	/* Utilizando toStrig */
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf);
+	}
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", sexo=" + sexo + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(nome, numeroCpf);
+				+ serieMatriculado + ", sexo=" + sexo + ", disciplinas=" + disciplinas + "]";
 	}
 
 	@Override
