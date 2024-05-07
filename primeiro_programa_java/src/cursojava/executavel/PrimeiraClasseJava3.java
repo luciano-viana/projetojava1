@@ -1,5 +1,8 @@
 package cursojava.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -9,6 +12,11 @@ import cursojava.classes.Disciplina;
 public class PrimeiraClasseJava3 {
 
 	public static void main(String[] args) {
+		
+		/*Instância lista de Alunos*/
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		for(int qtd = 1; qtd <=2; qtd++) {
 
 		/*
 		 * Aluno aluno = new Aluno(); System.out.println(aluno.toString());/*Descrição
@@ -21,7 +29,7 @@ public class PrimeiraClasseJava3 {
 		 */
 
 		/* 1º - Entrada de Dados */
-		String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno?");
+		String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno" + qtd+ " ?");
 		/*String idade = JOptionPane.showInputDialog("14:Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("13:Data de Nascimento?");
 		String rg = JOptionPane.showInputDialog("12:RG?");
@@ -79,11 +87,18 @@ public class PrimeiraClasseJava3 {
 			}
 		}
 		
+		alunos.add(aluno1);
+		}
 		
-		/* 4º - Chamar os métodos e mostrar os dados com toString */
-		System.out.println(aluno1.toString());/* Descrição do objeto na memoria */
-		System.out.println("Média do Aluno = " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		for (Aluno aluno : alunos) {
+			
+			/* 4º - Chamar os métodos e mostrar os dados com toString */
+			System.out.println(aluno.toString());/* Descrição do objeto na memoria */
+			System.out.println("Média do Aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			System.out.println("----------------------------------------------------------------");
+		}
+		
 
 		/*
 		 * Todo software sempre segue a mesmA lógica:
