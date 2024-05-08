@@ -29,7 +29,7 @@ public class PrimeiraClasseJava3 {
 		 */
 
 		/* 1º - Entrada de Dados */
-		String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno" + qtd+ " ?");
+		String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno " + qtd + " ?");
 		/*String idade = JOptionPane.showInputDialog("14:Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("13:Data de Nascimento?");
 		String rg = JOptionPane.showInputDialog("12:RG?");
