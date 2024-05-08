@@ -92,11 +92,14 @@ public class PrimeiraClasseJava3 {
 		
 		for (Aluno aluno : alunos) {
 			
+			if(aluno.getNome().equalsIgnoreCase("Luciano")) {
 			/* 4º - Chamar os métodos e mostrar os dados com toString */
 			System.out.println(aluno.toString());/* Descrição do objeto na memoria */
 			System.out.println("Média do Aluno = " + aluno.getMediaNota());
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
 			System.out.println("----------------------------------------------------------------");
+			break;
+		}
 		}
 		
 
