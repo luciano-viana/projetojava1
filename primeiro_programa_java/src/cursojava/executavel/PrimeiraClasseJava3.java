@@ -106,16 +106,17 @@ public class PrimeiraClasseJava3 {
 				System.out.println("----------------------------------------------------------------");
 			}
 		}
-		
-		for(Aluno aluno : alunos) {
-			System.out.println("Alunos que sobraram na lista: ");
+
+		for (Aluno aluno : alunos) {
+			System.out.println("Aluno que sobrou na lista: ");
 			System.out.println(aluno.getNome());
 			System.out.println("Suas materias são: ");
-			
-			for(Disciplina disciplina : aluno.getDisciplinas()) {
+
+			for (Disciplina disciplina : aluno.getDisciplinas()) {
 				System.out.println(disciplina.getDisciplina());
 			}
-			
+			System.out.println("----------------------------------------------------------------");
+
 		}
 
 		/*
