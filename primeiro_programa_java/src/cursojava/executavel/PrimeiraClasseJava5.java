@@ -109,7 +109,5 @@ public class PrimeiraClasseJava5 {
 		 * Instanciar os Objetos 3º - Passar os valores da entrada de dados para o
 		 * Objeto 4º - Processar e ter o resultado final
 		 */
-
 	}
-
 }
