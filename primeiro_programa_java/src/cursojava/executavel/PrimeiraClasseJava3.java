@@ -16,7 +16,7 @@ public class PrimeiraClasseJava3 {
 		/* Instância lista de Alunos */
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
-		for (int qtd = 1; qtd <= 2; qtd++) {
+		for (int qtd = 1; qtd <= 5; qtd++) {
 
 			/*
 			 * Aluno aluno = new Aluno(); System.out.println(aluno.toString());/*Descrição
