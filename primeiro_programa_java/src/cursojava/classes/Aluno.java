@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import cursojava.constantes.StatusAluno;
+
 /*A essência da orientação a objeto é ir criando métodos,rotinas,ir chamado e processando o software*/
 /*Está é nossa classe/objeto que representa o Aluno*/
 public class Aluno {
@@ -179,12 +181,12 @@ public class Aluno {
 
 		if (media >= 50) {
 			if(media >= 70) {
-				return "Aluno Aprovado!!";
+				return StatusAluno.APROVADO;
 			}else {
-				return "Aluno em recuperação";
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno Reprovado!!";
+			return StatusAluno.REPROVADO;
 		}
 	}
 
