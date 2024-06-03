@@ -7,7 +7,7 @@ import java.util.Objects;
 import cursojava.classes.Disciplina;
 import cursojava.constantes.StatusAluno;
 
-
+/*Classe filha de pessoa que extende de pessoa*/
 public class Aluno2 extends Pessoa {
 
 	private String dataMatricula;

@@ -1,6 +1,7 @@
 package cursojava.heranca_polimorfismo;
 
-public class Secretario {
+/*Classe filha de pessoa que extende de pessoa*/
+public class Secretario extends Pessoa {
 	
 	private String registro;
 	private String nivelCargo;
@@ -25,7 +26,13 @@ public class Secretario {
 		this.experiencia = experiencia;
 	}
 	
+	@Override
+	public String toString() {
+		return "Secretario [registro=" + registro + ", nivelCargo=" + nivelCargo + ", experiencia=" + experiencia
+				+ ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCPF=" + numeroCPF + ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + "]";
+	}
 	
 	
-
+	
 }

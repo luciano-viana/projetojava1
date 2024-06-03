@@ -1,5 +1,6 @@
 package cursojava.heranca_polimorfismo;
 
+/*Herança - Classe Pai ou a classe Master ou Superclasse - (Atributos comuns a todos os objetos filhos)*/
 public class Pessoa {
 	
 	protected String nome;
