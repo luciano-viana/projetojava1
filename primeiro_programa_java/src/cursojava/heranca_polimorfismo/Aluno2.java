@@ -206,4 +206,15 @@ public class Aluno2 extends Pessoa {
 		Aluno2 other = (Aluno2) obj;
 		return Objects.equals(nome, other.nome) && Objects.equals(numeroCPF, other.numeroCPF);
 	}
+	
+	@Override /*Identifica método sobreescrito*/
+	public boolean pessoaMaiorIdade() {
+		//return super.pessoaMaiorIdade();
+		//mudando a regra do método primária
+		return idade > 21;
+	}
+	
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade()? "Obaa aluno é maior idade":"Ixii você é menor de idade";
+	}
 }

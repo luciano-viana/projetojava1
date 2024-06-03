@@ -1,7 +1,9 @@
 package cursojava.heranca_polimorfismo;
 
 /*Herança - Classe Pai ou a classe Master ou Superclasse - (Atributos comuns a todos os objetos filhos)*/
-public class Pessoa {
+/*abstract é utilizado para não deixar criar um objeto de um classe generica "por exemplo classe Pessoa" 
+ * impedir que algo seja feito errado dentro do código, utilizado para manter a regra do sistema*/
+public abstract class Pessoa {
 	
 	protected String nome;
 	protected int idade;
@@ -54,5 +56,14 @@ public class Pessoa {
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
+	
+	/*Retorna true caso seja 18 anos pra cima, senão false*/
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 
 }
+
+
+
+
