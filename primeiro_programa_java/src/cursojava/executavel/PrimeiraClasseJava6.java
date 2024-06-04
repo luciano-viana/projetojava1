@@ -6,9 +6,12 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import curso.java.viana.Pessoa;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
+import cursojava.heranca_polimorfismo.Diretor;
 import cursojava.heranca_polimorfismo.Secretario;
 import cursojava.interfaces.PermitirAcesso;
 
@@ -20,15 +23,22 @@ public class PrimeiraClasseJava6 {
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
 		
+	
 		//Secretario secretario = new Secretario();/*1º - Diretamente com o objeto*/
 		/*secretario.setLogin(login);
 		  secretario.setSenha(senha);*/
 
-		//PermitirAcesso secretario = new Secretario();
+		 //PermitirAcesso secretario = new Secretario();
+		
+		 // FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
+		
+		  //PermitirAcesso permitirAcesso = new Secretario(login,senha);
 		
 		//2º passar os parâmetros de autenticação direto na Interface
-		if (new Secretario().autenticar(login,senha)) {//se TRUE acessa,se FALSE não acessa 
-
+		if (new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) {/*se TRUE acessa,se FALSE não acessa - Vou travar o contrato para autorizar somente
+		quem realmente tem o contrato 100% legitimo*/ 
+	    //acima: Nova função de atenticação "new FuncaoAutenticacao" recebendo um objeto secretárioa "new Secretario(login,senha)" e invocando o "autenticar()" isso é muito comum no Java
+        //acima: Secretario e Diretor está autenticado para acessar o sistema
 			/* Instância lista de Alunos */
 			List<Aluno> alunos = new ArrayList<Aluno>();
 

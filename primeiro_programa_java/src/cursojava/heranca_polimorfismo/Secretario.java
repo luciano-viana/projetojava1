@@ -9,8 +9,16 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	private String nivelCargo;
 	private String experiencia;
 	
-	/*private String login;
-	private String senha;*/
+	private String login;
+	private String senha;
+	
+	public Secretario(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+	}
+	
+	public Secretario() {//Construtor padrão
+	}
 	
 	public String getRegistro() {
 		return registro;
@@ -51,8 +59,18 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 		return login.equalsIgnoreCase("admin")&& senha.equalsIgnoreCase("admin");//Retorna SIM caso o login e senha seja admin senão FALSE
 	}*/
 	
+	//Método não está sendo utiliza mais é mais uma forma que pode utilizar o método de autenticar
 	@Override
 	public boolean autenticar(String login, String senha) {
+		// TODO Auto-generated method stub
+		//return login.equalsIgnoreCase("admin")&& senha.equalsIgnoreCase("admin");
+		this.login = login;
+		this.senha = senha;
+		return autenticar();
+	}
+	
+	@Override
+	public boolean autenticar() {
 		// TODO Auto-generated method stub
 		return login.equalsIgnoreCase("admin")&& senha.equalsIgnoreCase("admin");
 	}
