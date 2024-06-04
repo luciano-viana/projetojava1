@@ -10,6 +10,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.constantes.StatusAluno;
 import cursojava.heranca_polimorfismo.Secretario;
+import cursojava.interfaces.PermitirAcesso;
 
 /*Essa Classe é uma simplificação da PrimeiraClasse2*/
 public class PrimeiraClasseJava6 {
@@ -19,11 +20,14 @@ public class PrimeiraClasseJava6 {
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
 		
-		Secretario secretario = new Secretario();/*Diretamente com o objeto*/
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
+		//Secretario secretario = new Secretario();/*1º - Diretamente com o objeto*/
+		/*secretario.setLogin(login);
+		  secretario.setSenha(senha);*/
 
-		if (secretario.autenticar()) {//se TRUE acessa,se FALSE não acessa 
+		//PermitirAcesso secretario = new Secretario();
+		
+		//2º passar os parâmetros de autenticação direto na Interface
+		if (new Secretario().autenticar(login,senha)) {//se TRUE acessa,se FALSE não acessa 
 
 			/* Instância lista de Alunos */
 			List<Aluno> alunos = new ArrayList<Aluno>();
