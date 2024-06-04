@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.constantes.StatusAluno;
+import cursojava.heranca_polimorfismo.Secretario;
 
 /*Essa Classe é uma simplificação da PrimeiraClasse2*/
 public class PrimeiraClasseJava6 {
@@ -17,8 +18,12 @@ public class PrimeiraClasseJava6 {
 
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
+		
+		Secretario secretario = new Secretario();/*Diretamente com o objeto*/
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
 
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		if (secretario.autenticar()) {//se TRUE acessa,se FALSE não acessa 
 
 			/* Instância lista de Alunos */
 			List<Aluno> alunos = new ArrayList<Aluno>();
@@ -111,8 +116,7 @@ public class PrimeiraClasseJava6 {
 			}
 
 		} else {
-			JOptionPane.showMessageDialog(null, "Senha Incorreta!!");
+			JOptionPane.showMessageDialog(null, "Acesso não permitido ⚠");
 		}
-
 	}
 }
