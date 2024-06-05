@@ -42,7 +42,7 @@ public class PrimeiraClasseJava6 {
 	    //acima: Nova função de atenticação "new FuncaoAutenticacao" recebendo um objeto secretárioa "new Secretario(login,senha)" e invocando o "autenticar()" isso é muito comum no Java
         //acima: Secretario e Diretor está autenticado para acessar o sistema
 			/* Instância lista de Alunos */
-			List<Aluno> alunos = new ArrayList<Aluno>();
+			List<Aluno> alunos = null;//new ArrayList<Aluno>();
 
 			/*
 			 * é uma lista que dentro dela temos uma chave que identifica uma sequência de
@@ -137,8 +137,31 @@ public class PrimeiraClasseJava6 {
 		}
 		
 		}catch (Exception e) {
-			e.printStackTrace();/*Imprime erro no console Java*/
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + " [ " + e.getMessage()+ " ] ");
+			//É do próprio Java para trabalhar com texto
+			StringBuilder saida = new StringBuilder();
+			
+			/*Imprime erro no console Java*/
+			e.printStackTrace();
+			
+			/*Mensagem do erro ou causa*/
+			System.out.println("Mensagem: " + e.getMessage());
+			
+			/*Traz todas as informações retornando um array "simbolo []"*/
+			
+			for(int pos = 0; pos < e.getStackTrace().length;pos++) {
+				//append é para adicionar
+				saida.append("\n Classe de erro: " + e.getStackTrace()[pos].getClassName());
+				saida.append("\n Método de erro: " + e.getStackTrace()[pos].getMethodName());
+				saida.append("\n Linha de erro: " + e.getStackTrace()[pos].getLineNumber());
+				saida.append("\n Class: " + e.getStackTrace()[pos].getClass().getName());
+				saida.append("\n Nome do carregador: " + e.getStackTrace()[pos].getClassLoaderName());
+				saida.append("\n Nome do arquivo: " + e.getStackTrace()[pos].getFileName());
+				saida.append("\n Nome do módulo: " + e.getStackTrace()[pos].getModuleName());
+				saida.append("\n Versão do módulo: " + e.getStackTrace()[pos].getModuleVersion());
+			}
+			
+			//JOptionPane.showMessageDialog(null, "Erro ao processar notas " + " [ " + e.getMessage()+ " ] ");
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
 		}
 	}
 }
