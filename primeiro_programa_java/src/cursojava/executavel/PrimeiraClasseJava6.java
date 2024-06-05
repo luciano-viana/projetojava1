@@ -19,6 +19,8 @@ import cursojava.interfaces.PermitirAcesso;
 public class PrimeiraClasseJava6 {
 
 	public static void main(String[] args) {
+		
+		try {
 
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
@@ -48,7 +50,8 @@ public class PrimeiraClasseJava6 {
 			 */
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
-			for (int qtd = 1; qtd <= 3; qtd++) {
+			//for para quantidade de alunos
+			for (int qtd = 1; qtd <= 1; qtd++) {
 
 				/* 1º - Entrada de Dados */
 				String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno " + qtd + " ?");
@@ -131,6 +134,11 @@ public class PrimeiraClasseJava6 {
 
 		} else {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido ⚠");
+		}
+		
+		}catch (Exception e) {
+			e.printStackTrace();/*Imprime erro no console Java*/
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + " [ " + e.getMessage()+ " ] ");
 		}
 	}
 }
