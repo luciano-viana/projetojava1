@@ -1,8 +1,10 @@
 package cursojava.executavel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -21,6 +23,10 @@ public class PrimeiraClasseJava6 {
 	public static void main(String[] args) {
 		
 		try {
+		
+		//criado para teste de tratamento de exceção	
+	    File fil = new File("c://arquivo.txt");
+	    Scanner scanner = new Scanner(fil);
 
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
@@ -42,7 +48,7 @@ public class PrimeiraClasseJava6 {
 	    //acima: Nova função de atenticação "new FuncaoAutenticacao" recebendo um objeto secretárioa "new Secretario(login,senha)" e invocando o "autenticar()" isso é muito comum no Java
         //acima: Secretario e Diretor está autenticado para acessar o sistema
 			/* Instância lista de Alunos */
-			List<Aluno> alunos = null;//new ArrayList<Aluno>();
+			List<Aluno> alunos = new ArrayList<Aluno>();
 
 			/*
 			 * é uma lista que dentro dela temos uma chave que identifica uma sequência de
@@ -55,6 +61,7 @@ public class PrimeiraClasseJava6 {
 
 				/* 1º - Entrada de Dados */
 				String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno " + qtd + " ?");
+				String idade = JOptionPane.showInputDialog("Qual a idade? ");
 
 				/* 2º - Instanciar objeto na memória do Java */
 				Aluno aluno1 = new Aluno();
@@ -62,6 +69,7 @@ public class PrimeiraClasseJava6 {
 				/* 3º - Setar as propriedades do Objeto */
 				/* SET setar os dados dentro do objetivo */
 				aluno1.setNome(nome);
+				aluno1.setIdade(Integer.valueOf(idade));
 
 				/* Adicionando dados na lista disciplina de forma dinâmica */
 				for (int pos = 1; pos <= 1; pos++) {
@@ -136,7 +144,7 @@ public class PrimeiraClasseJava6 {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido ⚠");
 		}
 		
-		}catch (Exception e) {
+		}catch (/*Exception*/NumberFormatException e) {//Captura somente as exceções erro de conversão de números
 			//É do próprio Java para trabalhar com texto
 			StringBuilder saida = new StringBuilder();
 			
@@ -161,7 +169,16 @@ public class PrimeiraClasseJava6 {
 			}
 			
 			//JOptionPane.showMessageDialog(null, "Erro ao processar notas " + " [ " + e.getMessage()+ " ] ");
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+			//JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
+			
+		}catch (NullPointerException e) {//Capturar somente o NullPointerException
+			JOptionPane.showMessageDialog(null, "Opaa um null pointer exeption : " + e.getClass());
+			e.printStackTrace();
+		}catch (Exception e) {//Captura todas as exceções que não prevemos
+			// TODO: handle exception
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null,  "Erro inesperado : " + e.getMessage());
 		}
 	}
 }
