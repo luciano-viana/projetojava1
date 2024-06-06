@@ -66,7 +66,7 @@ public class PrimeiraClasseJava6 {
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
 			//for para quantidade de alunos
-			for (int qtd = 1; qtd <= 1; qtd++) {
+			for (int qtd = 1; qtd <= 3; qtd++) {
 
 				/* 1º - Entrada de Dados */
 				String nome = JOptionPane.showInputDialog("15:Qual o nome do Aluno " + qtd + " ?");
