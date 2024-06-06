@@ -1,6 +1,7 @@
 package cursojava.executavel;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +14,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
+import cursojava.excecao.ExcecaoProcessarNota;
 import cursojava.heranca_polimorfismo.Diretor;
 import cursojava.heranca_polimorfismo.Secretario;
 import cursojava.interfaces.PermitirAcesso;
@@ -23,10 +25,17 @@ public class PrimeiraClasseJava6 {
 	public static void main(String[] args) {
 		
 		try {
+			//Método criando para tratamento da exceção "ExcecaoProcessarNota"
+			//lerArquivo();
 		
+		/*	
+		try {
 		//criado para teste de tratamento de exceção	
-	    File fil = new File("c://arquivo.txt");
-	    Scanner scanner = new Scanner(fil);
+	        File fil = new File("c://arquivo.txt");
+	        Scanner scanner = new Scanner(fil);
+		}catch (FileNotFoundException e) {
+			throw new ExcecaoProcessarNota(e.getMessage());
+		}*/
 
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe o senha: ");
@@ -185,4 +194,25 @@ public class PrimeiraClasseJava6 {
 			JOptionPane.showMessageDialog(null, "Execução de código encerrada!!");
 		}
 	}
+	
+	//Método para tratar a exceção ao ler arquivos
+	//Exceção implementada direto no método
+	/*public static void lerArquivo() throws ExcecaoProcessarNota {
+		try {
+			File fil = new File("c://arquivo.txt");
+	        Scanner scanner = new Scanner(fil);
+		} catch (Exception e) {
+			//exceção customizada
+			throw new ExcecaoProcessarNota(e.getMessage());
+		}
+	}*/
+	
+	//Método jogado exceção para cima dentro do método PAI "main""exceção padrão sem ser a customizada"
+	public static void lerArquivo() throws FileNotFoundException {
+			File fil = new File("c://arquivo.txt");
+	        Scanner scanner = new Scanner(fil);
+	}
+	
+	
+	
 }
