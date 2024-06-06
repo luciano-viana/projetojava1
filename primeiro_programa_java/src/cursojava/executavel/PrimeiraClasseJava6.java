@@ -179,6 +179,10 @@ public class PrimeiraClasseJava6 {
 			// TODO: handle exception
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null,  "Erro inesperado : " + e.getMessage());
+		}finally {//É uma função para tratamento de exceção / Sempre é executado ocorrendo erros ou não
+			      //Finally sempre é usado quando precisa executar um processo acontecendo erro ou não
+			      //Finally é usado para executar tarefas que não pode deixar de executar, por exemplo, fechar uma conexão com o banco de dados.
+			JOptionPane.showMessageDialog(null, "Execução de código encerrada!!");
 		}
 	}
 }
