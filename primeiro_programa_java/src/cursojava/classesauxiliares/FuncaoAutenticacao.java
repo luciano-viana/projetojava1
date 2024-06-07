@@ -7,6 +7,7 @@ public class FuncaoAutenticacao {
     
 	private PermitirAcesso permitirAcesso;
 	
+	//Método autenticar
 	public boolean autenticar() {
 		return permitirAcesso.autenticar();
 	}
