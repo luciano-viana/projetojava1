@@ -40,9 +40,20 @@ public class ArrayVetor1 {
 			System.out.println("Disciplina: " + disc.getDisciplina());
 			System.out.println("As notas das Disciplinas são: ");
 			
+			double notaMax=0.0;
 			for(int pos = 0; pos < disc.getNota().length; pos ++) {
 				System.out.println("Nota " + (pos+1) + " é igual = " + disc.getNota()[pos]);
+				
+				//Descobrindo o maior valor de notas dentro de um Array
+				if( pos == 0) {
+					notaMax = disc.getNota()[pos];
+				}else {
+					if(disc.getNota()[pos] > notaMax) {
+						notaMax = disc.getNota()[pos];
+					}
+				}
 			}
+			System.out.println("A maior nota da Disciplina = " + disc.getDisciplina() + " e de valor : " + notaMax);
 			System.out.println("-----------------------------------------");
 		}
 		
