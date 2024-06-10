@@ -40,7 +40,9 @@ public class ArrayVetor1 {
 			System.out.println("Disciplina: " + disc.getDisciplina());
 			System.out.println("As notas das Disciplinas são: ");
 			
+			//Variável auxiliar para descobrir maior nota do aluno
 			double notaMax=0.0;
+			double notaMinima = 0.0;
 			for(int pos = 0; pos < disc.getNota().length; pos ++) {
 				System.out.println("Nota " + (pos+1) + " é igual = " + disc.getNota()[pos]);
 				
@@ -52,8 +54,19 @@ public class ArrayVetor1 {
 						notaMax = disc.getNota()[pos];
 					}
 				}
+				
+				//Descobrindo a menor nota dentro de um Array
+				if(pos == 0){
+					notaMinima = disc.getNota()[pos];
+				}else {
+					if(disc.getNota()[pos] < notaMinima) {
+						notaMinima = disc.getNota()[pos];
+					}
+				}
 			}
+			
 			System.out.println("A maior nota da Disciplina = " + disc.getDisciplina() + " e de valor : " + notaMax);
+			System.out.println("A menor nota da Disciplina = " + disc.getDisciplina() + " e de valor : " + notaMinima);
 			System.out.println("-----------------------------------------");
 		}
 		
