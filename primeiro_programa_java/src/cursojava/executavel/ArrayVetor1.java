@@ -23,14 +23,29 @@ public class ArrayVetor1 {
 		disciplina.setDisciplina("Curso de java");
 		disciplina.setNota(notas);//Inserido as notas
 		
+		
 		//Disciplina2
 		Disciplina disciplina2 = new Disciplina();
-		disciplina.setDisciplina("Lógica de programação");
-		disciplina.setNota(notasLogica);//Inserido as notas
+		disciplina2.setDisciplina("Lógica de programação");
+		disciplina2.setNota(notasLogica);//Inserido as notas
 		
 		//Inserido disciplinas dentro da lista de disciplina do Aluno
 		aluno.getDisciplinas().add(disciplina);
 		aluno.getDisciplinas().add(disciplina2);
+		
+		System.out.println("Nome do aluno = " + aluno.getNome() + " inscrito no curso: " + aluno.getNomeEscola());
+		
+		System.out.println("-----------Disciplinas do aluno-----------");
+		for(Disciplina disc : aluno.getDisciplinas()) {
+			System.out.println("Disciplina: " + disc.getDisciplina());
+			System.out.println("As notas das Disciplinas são: ");
+			
+			for(int pos = 0; pos < disc.getNota().length; pos ++) {
+				System.out.println("Nota " + (pos+1) + " é igual = " + disc.getNota()[pos]);
+			}
+			System.out.println("-----------------------------------------");
+		}
+		
 	}
 
 }
