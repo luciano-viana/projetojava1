@@ -31,8 +31,6 @@ public class ArrayVetor1 {
 		//Inserido disciplinas dentro da lista de disciplina do Aluno
 		aluno.getDisciplinas().add(disciplina);
 		aluno.getDisciplinas().add(disciplina2);
-		
-		
 	}
 
 }
