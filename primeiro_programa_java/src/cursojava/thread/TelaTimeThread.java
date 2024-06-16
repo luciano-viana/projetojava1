@@ -16,9 +16,6 @@ public class TelaTimeThread extends JDialog {
 		/*Primeira parte concluida*/
 		
 		
-		
-		
-		
 		//Sempre será o últmo comando
 		setVisible(true);/*Torna a tela visivel para o usuário*/
 	}
