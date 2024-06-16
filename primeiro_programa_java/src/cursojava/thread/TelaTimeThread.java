@@ -112,7 +112,7 @@ public class TelaTimeThread extends JDialog {
 		jPanel.add(mostraTempo2, griBagConstraints);
 
 		// Criação dos botões
-		griBagConstraints.gridwidth = 1;// posicionamento de largura voltou a ser 1
+		griBagConstraints.gridwidth = 1;// posicionamento da largura para voltou a ser 1
 
 		jButton.setPreferredSize(new Dimension(92, 25));
 		griBagConstraints.gridy++;
@@ -159,7 +159,7 @@ public class TelaTimeThread extends JDialog {
 		
 		add(jPanel, BorderLayout.WEST);
 		// Sempre será o último comando
-		setVisible(true);/* Torna a tela visivel para o usuário */
+		setVisible(true);/* Torna a tela visível para o usuário */
 	}
 
 }
