@@ -31,8 +31,8 @@ public class TelaTimeThread2 extends JDialog {
 	// Criação dos botões
 	private JButton jButton = new JButton("Gerar...");// Decrição do botão
 	private JButton jButton2 = new JButton("Stop");
-	
-	//Instanciado
+
+	// Instanciado
 	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
 
 	public TelaTimeThread2() {/* Constructor executa o que tiver dentro no momento da abertura ou execução */
@@ -77,41 +77,39 @@ public class TelaTimeThread2 extends JDialog {
 		jButton2.setPreferredSize(new Dimension(92, 25));
 		griBagConstraints.gridx++;// andar coluna no eixo X
 		jPanel.add(jButton2, griBagConstraints);
-		
-		//Fazer ação do botão
-		//Botão START
-		jButton.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {/*Executa o clique no botão*/
 
-				if(fila == null) {
+		// Fazer ação do botão
+		// Botão START
+		jButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {/* Executa o clique no botão */
+
+				if (fila == null) {
 					fila = new ImplementacaoFilaThread();
 					fila.start();
 				}
-				
-				for(int qtd = 0; qtd < 100; qtd++) {/*Simulando 100 envios em massa*/
-				ObjetoFilaThread filaThread = new ObjetoFilaThread();
-				filaThread.setNome(mostraNome.getText());
-				filaThread.setEmail(mostraEmail.getText() + " - " + qtd);
-				
-				fila.add(filaThread);
+
+				for (int qtd = 0; qtd < 100; qtd++) {/* Simulando 100 envios em massa */
+					ObjetoFilaThread filaThread = new ObjetoFilaThread();
+					filaThread.setNome(mostraNome.getText());
+					filaThread.setEmail(mostraEmail.getText() + " - " + qtd);
+
+					fila.add(filaThread);
 				}
 			}
-		} );
-		
-		
-		//Botão STOP
+		});
+
+		// Botão STOP
 		jButton2.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				fila.stop();
 				fila = null;
 			}
 		});
-		
-		
+
 		fila.start();
 		add(jPanel, BorderLayout.WEST);
 		// Sempre será o último comando
