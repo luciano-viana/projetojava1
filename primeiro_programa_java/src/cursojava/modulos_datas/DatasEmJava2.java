@@ -30,5 +30,8 @@ public class DatasEmJava2 {
 			}else {
 				System.out.println("Boleto não vencido");
 			}
+		
+		//After: se data 1 é maior do que data 2
+		//Before: se data 1 é menor do que data 2
 	}
 }
