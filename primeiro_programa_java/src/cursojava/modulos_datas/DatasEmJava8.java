@@ -10,7 +10,7 @@ public class DatasEmJava8 {
 		//Classe Instant é utilizado para saber quando tempo demora para um processo ser executado
 		Instant inicio = Instant.now();
 		
-		Thread.sleep(1000);//Pode ser um processo com tempo qualquer que não conhecemos
+		Thread.sleep(100);//Pode ser um processo com tempo qualquer que não conhecemos
 		
 		Instant ifinal = Instant.now();
 		
