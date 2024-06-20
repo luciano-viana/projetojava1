@@ -12,7 +12,7 @@ public class LerArquivoCSV {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		// Arquivo de entrada de dados
-		FileInputStream entradaArquivo = new FileInputStream(new File(//Ler arquivo CSV
+		FileInputStream entradaArquivo = new FileInputStream(new File(// Ler arquivo CSV
 				"C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo.csv"));
 
 		// Passado a entrada do arquivo "entradaArquivo" e codificação "UTF-8"
