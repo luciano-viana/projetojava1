@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class arquivos {
+public class arquivos2 {
 
 	public static void main(String[] args) throws IOException {
 
@@ -33,9 +33,9 @@ public class arquivos {
 		pessoas.add(pesso2);
 		pessoas.add(pesso3);
 		
-		// Objeto arquivo
-		File arquivo = //Gerando arquivo no formtado TXT
-				new File("C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo.txt");
+		// Objeto arquivo 
+		File arquivo = new //Gerando arquivo no formtado CSV
+				File("C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo.csv");
 
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
