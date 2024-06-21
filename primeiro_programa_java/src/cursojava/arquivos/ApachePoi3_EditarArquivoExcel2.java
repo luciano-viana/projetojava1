@@ -10,7 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
-public class ApachePoi3_EditarArquivoExcel {
+public class ApachePoi3_EditarArquivoExcel2 {
 
 	public static void main(String[] args) throws Exception {
 
@@ -28,14 +28,13 @@ public class ApachePoi3_EditarArquivoExcel {
 		Iterator<Row> linhaIterato = planilha.iterator();
 
 		while (linhaIterato.hasNext()) {// Enquanto tiver linha
-			Row linha = linhaIterato.next();// Dados da pessoa na linha "next próxima linha"
-
-			// Retorna número de celulas da linha
-			int numeroCelulas = linha.getPhysicalNumberOfCells();// Quantidade de celula
-
-			// Criar celula na linha
-			Cell cell = linha.createCell(numeroCelulas);// Cria nova celula da linha
-			cell.setCellValue("5.487,20");
+			
+		  Row linha = linhaIterato.next();//Dados da pessoa na linha
+		  
+		  String valorCelula = linha.getCell(0).getStringCellValue();
+		  
+		  linha.getCell(0).setCellValue(valorCelula + " * valor gravado na aula");
+          
 		}
 
 		entrada.close();
