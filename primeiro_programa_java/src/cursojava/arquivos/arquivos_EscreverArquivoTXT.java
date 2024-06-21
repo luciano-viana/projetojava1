@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class arquivos2 {
+public class arquivos_EscreverArquivoTXT {
 
 	public static void main(String[] args) throws IOException {
 
@@ -33,8 +33,9 @@ public class arquivos2 {
 		pessoas.add(pesso3);
 
 		// Objeto arquivo
-		File arquivo = new // Gerando arquivo no formtado CSV
-		File("C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo.csv");
+		File arquivo = // Gerando arquivo no formtado TXT
+				new File(
+						"C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo.txt");
 
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
@@ -57,12 +58,12 @@ public class arquivos2 {
 		 * escrever_no_arquivo.write("Texto da minha linha " + i + " \n"); }
 		 */
 
-		for (Pessoa pessoa : pessoas) {
+		for (Pessoa pessoa : pessoas) {// Varre os dados da lista de pessoas
 			escrever_no_arquivo.write(pessoa.getNome() + ";" + pessoa.getIdade() + ";" + pessoa.getEmail() + "\n");
 		}
 
-		escrever_no_arquivo.flush();
-		escrever_no_arquivo.close();
+		escrever_no_arquivo.flush();// O flush é para obrigar realmente a escrever os dados para disco.
+		escrever_no_arquivo.close();// Fechar
 	}
 
 }

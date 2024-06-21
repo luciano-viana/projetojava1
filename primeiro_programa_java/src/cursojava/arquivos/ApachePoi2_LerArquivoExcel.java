@@ -13,7 +13,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
-public class ApachePoi2 {
+public class ApachePoi2_LerArquivoExcel {
 
 	public static void main(String[] args) throws Exception {
 
