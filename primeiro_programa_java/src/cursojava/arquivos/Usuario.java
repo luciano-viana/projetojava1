@@ -49,7 +49,5 @@ public class Usuario implements Serializable {
 	public String toString() {
 		return "Usuario [login=" + login + ", senha=" + senha + ", nome=" + nome + ", cpf=" + cpf + "]";
 	}
-	
-	
 
 }

@@ -21,7 +21,7 @@ public class EscreverJSON {
 
 	public static void main(String[] args) throws IOException {
 
-		//1º - Criar Objetos e passar os dados
+		// 1º - Criar Objetos e passar os dados
 		Usuario usuario1 = new Usuario();
 		usuario1.setNome("Luciano Viana");
 		usuario1.setCpf("745.632.040-30");
@@ -34,20 +34,19 @@ public class EscreverJSON {
 		usuario2.setLogin("Juju");
 		usuario2.setSenha("@24");
 
-		//2º - Colocar na Lista
+		// 2º - Colocar na Lista
 		List<Usuario> usuarios = new ArrayList<Usuario>();
 		usuarios.add(usuario1);
 		usuarios.add(usuario2);
 
-		//3º - Converter a lista para JSON
+		// 3º - Converter a lista para JSON
 		// Gson Utilizado para organizar o código
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String jsonUser = gson.toJson(usuarios);
-		
-		
+
 		System.out.println(jsonUser);
 
-		//4º - Escrever no arquivo
+		// 4º - Escrever no arquivo
 		FileWriter fileWriter = new FileWriter(
 				"C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\filjson.json");
 

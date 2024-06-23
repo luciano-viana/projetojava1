@@ -23,7 +23,8 @@ public class LerJSON {
 		FileReader fileReader = new FileReader(
 				"C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\filjson.json");
 
-		// Pegando os dados do arquivo e colocando no JsonArray que é uma estrutura de dados
+		// Pegando os dados do arquivo e colocando no JsonArray que é uma estrutura de
+		// dados
 		JsonArray jsArray = (JsonArray) JsonParser.parseReader(fileReader);// Separa todos os Json em posições separadas
 
 		List<Usuario> listaUsuarios = new ArrayList<Usuario>();

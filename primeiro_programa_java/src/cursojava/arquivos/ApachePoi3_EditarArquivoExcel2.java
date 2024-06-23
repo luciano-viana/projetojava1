@@ -14,7 +14,7 @@ public class ApachePoi3_EditarArquivoExcel2 {
 
 	public static void main(String[] args) throws Exception {
 
-		//Objeto File "Arquivo"
+		// Objeto File "Arquivo"
 		File file = new File(
 				"C:\\Users\\lucianoviana\\git\\projetojava1\\primeiro_programa_java\\src\\cursojava\\arquivos\\arquivo_excel.xls");
 
@@ -28,13 +28,13 @@ public class ApachePoi3_EditarArquivoExcel2 {
 		Iterator<Row> linhaIterato = planilha.iterator();
 
 		while (linhaIterato.hasNext()) {// Enquanto tiver linha
-			
-		  Row linha = linhaIterato.next();//Dados da pessoa na linha
-		  
-		  String valorCelula = linha.getCell(0).getStringCellValue();
-		  
-		  linha.getCell(0).setCellValue(valorCelula + " * valor gravado na aula");
-          
+
+			Row linha = linhaIterato.next();// Dados da pessoa na linha
+
+			String valorCelula = linha.getCell(0).getStringCellValue();
+
+			linha.getCell(0).setCellValue(valorCelula + " * valor gravado na aula");
+
 		}
 
 		entrada.close();
