@@ -21,13 +21,13 @@ public class Modulo17 {
 	17.17 - Modelo mental de estudos em Spring MVC - OK			
 	17.18 - Modelo mental de estudos em JavaServer Faces - OK			
 	17.19 - Modelo mental de estudos em REST e RESTful - OK			
-	17.20 - Modelo mental de estudos Java Web			
-	17.21 - Conhecendo básico de HTML			
-	17.22 - JavaScript não é Java - Vamos aprender a diferença			
-	17.23 - Vamos aprender o que é CSS			
-	17.24 - Entendendo arquitetura em (MVC ) Model - View - Controller			
-	17.25 - Frameworks ORM - Hibernate e JPA			
-	17.26 - Funcionamento dos Web Services			
-	17.27 - Importância do banco de dados em um sistema			
+	17.20 - Modelo mental de estudos Java Web - OK				
+	17.21 - Conhecendo básico de HTML - OK				
+	17.22 - JavaScript não é Java - Vamos aprender a diferença - OK				
+	17.23 - Vamos aprender o que é CSS - OK				
+	17.24 - Entendendo arquitetura em (MVC ) Model - View - Controller - OK				
+	17.25 - Frameworks ORM - Hibernate e JPA - OK				
+	17.26 - Funcionamento dos Web Services - OK			
+	17.27 - Importância do banco de dados em um sistema - OK		
 	*/
 }
